@@ -1,5 +1,8 @@
 Travel::Application.routes.draw do
   # Routes for the Photo resource:
+
+  root 'requests#index'
+
   # CREATE
   get '/photos/new', controller: 'photos', action: 'new', as: 'new_photo'
   post '/photos', controller: 'photos', action: 'create', as: 'photos'
