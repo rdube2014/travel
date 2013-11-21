@@ -6,7 +6,7 @@
   <div class="form-group">
     <%= label_tag "Link photo to reply #", nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-       <%= select_tag :reply_id, options_from_collection_for_select(Reply.all, :id, :id), class: 'form-control' %>
+       <%= select_tag :reply_id, options_from_collection_for_select(Reply.all, :id, :id, @photo.reply_id), class: 'form-control' %>
     </div>
   </div>
 

@@ -1,12 +1,12 @@
 <div class="page-header">
-  <h1>Editing Request #<%= @request.id %></h1>
+  <h1>Editing My Trip to <%= @request.travel_to_city %></h1>
 </div>
 
 <%= form_tag(request_url(@request), method: 'patch', class: 'form-horizontal') do %>
   <div class="form-group">
     <%= label_tag :user_id, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-       <%= select_tag :user_id, options_from_collection_for_select(User.all, :id, :full_name), class: 'form-control' %>
+       <%= select_tag :user_id, options_from_collection_for_select(User.all, :id, :full_name, @request.user_id), class: 'form-control' %>
     </div>
   </div>
 
@@ -48,7 +48,10 @@
   <div class="form-group">
     <%= label_tag :category, nil, class: 'col-md-2 control-label' %>
     <div class="col-md-6">
-      <%= text_field_tag :category, @request.category, class: 'form-control' %>
+      <select <%= text_field_tag :category, @request.category, class: 'form-control' %>
+        <option value="Leisure">Leisure</option>
+        <option value="Business">Business</option>
+       </select>
     </div>
   </div>
 

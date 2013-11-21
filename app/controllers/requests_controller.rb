@@ -1,5 +1,7 @@
 class RequestsController < ApplicationController
 
+CATEGORIES = ['business', 'leisure']
+
   def index
     @requests = Request.all
   end
