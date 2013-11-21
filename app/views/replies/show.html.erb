@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h1>Reply #<%= @reply.id %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>User</dt>
+  <dd><%= @reply.user_id %></dd>
+
+  <dt>Request</dt>
+  <dd><%= @reply.request_id %></dd>
+
+  <dt>Reply text</dt>
+  <dd><%= @reply.reply_text %></dd>
+
+  <dt>Expert star rating</dt>
+  <dd><%= @reply.expert_star_rating %></dd>
+
+  <dt>Expert review</dt>
+  <dd><%= @reply.expert_review %></dd>
+
+  <dt>Traveler star rating</dt>
+  <dd><%= @reply.traveler_star_rating %></dd>
+
+</dl>
