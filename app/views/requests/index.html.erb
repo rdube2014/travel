@@ -24,7 +24,7 @@
   <tbody>
     <% @requests.each do |request| %>
       <tr>
-        <td><%= request.user_id %></td>
+        <td><%= request.user.full_name %></td>
         <td><%= request.created_date %></td>
         <td><%= request.trip_start_date %></td>
         <td><%= request.trip_end_date %></td>
